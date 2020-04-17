@@ -43,9 +43,8 @@ class Song
   end
 
   def self.find_or_create_by_name(name)
-    self.all.include?(name)
     self.find_by_name(name)|| self.create(name)
-  end
+  end                             
   
   def self.new_from_filename(file_name)
     parse_song = file_name.split(" - ")

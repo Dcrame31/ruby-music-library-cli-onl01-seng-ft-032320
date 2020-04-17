@@ -1,6 +1,6 @@
 class Genre
   extend Concerns::Findable
-  attr_accessor :name
+  attr_accessor :name, :songs
   
   @@all=[]
   
@@ -26,10 +26,6 @@ class Genre
     genre.name = name
     genre.save
     genre
-  end
-  
-  def songs
-    @songs
   end
   
   def artists

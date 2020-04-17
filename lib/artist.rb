@@ -33,10 +33,6 @@ class Artist
     song.artist = self if !song.artist
   end
   
-  def songs
-    @songs
-  end
-  
   def genres
     self.songs.collect{|song| song.genre}.uniq
   end
